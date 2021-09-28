@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import style from './FeedbackOptions.module.css';
 
 const FeedbackOptions = ({options, onLeaveFeedback}) => {
@@ -14,5 +15,15 @@ const FeedbackOptions = ({options, onLeaveFeedback}) => {
   </ul>
   );
 }
+
+FeedbackOptions.defaultProps = {
+  options: [],
+};
+
+Notification.propTypes = {
+  options: PropTypes.array,
+  onLeaveFeedback: PropTypes.func,
+};
+
 
 export default FeedbackOptions;
